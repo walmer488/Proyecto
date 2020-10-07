@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D18BF9"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FormularioProducto"
+    >
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATOS DEL ARTÍCULO"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="26dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:src="@drawable/producto" />
+
+
+            <EditText
+                android:id="@+id/pro_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#fff"
+                android:drawableStart="@drawable/nombre"
+                android:drawableLeft="@drawable/nombre"
+                android:drawablePadding="5dp"
+                android:hint="lngrese nombre del producto"
+                android:paddingLeft="25dp" />
+
+
+
+            <EditText
+                android:id="@+id/pro_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#fff"
+                android:drawableStart="@drawable/ic_escria"
+                android:drawableLeft="@drawable/ic_escria"
+                android:drawablePadding="5dp"
+                android:hint="lngrese la descripción del producto"
+                android:paddingLeft="25dp" />
+
+
+
+
+            <EditText
+                android:id="@+id/pro_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#fff"
+                android:drawablePadding="5dp"
+                android:hint="#Stock"
+                android:inputType="number"
+                android:paddingLeft="25dp" />
+
+
+            <EditText
+                android:id="@+id/pro_precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#fff"
+                android:drawableStart="@drawable/money"
+                android:drawableLeft="@drawable/money"
+                android:drawablePadding="5dp"
+                android:hint="Precio del Artículo"
+                android:inputType="numberDecimal"
+                android:paddingLeft="25dp" />
+
+            <EditText
+                android:id="@+id/pro_estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#fff"
+                android:drawableStart="@drawable/estado"
+                android:drawableLeft="@drawable/estado"
+                android:drawablePadding="5dp"
+                android:hint="Estado Producto"
+                android:inputType="number"
+                android:paddingLeft="25dp" />
+
+
+
+            <Spinner
+                android:id="@+id/id_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#fff"
+                android:drawablePadding="5dp"
+                android:hint="Categoria"
+
+                android:paddingLeft="25dp" />
+
+
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/hola1"
+                android:drawableRight="@drawable/save"
+                android:drawablePadding="-140dp"
+                android:onClick="save"
+                android:paddingRight="100dp"
+                android:shadowColor="#2314A8"
+                android:shadowDx="-3"
+                android:shadowDy="0"
+                android:shadowRadius="8"
+                android:text="Guardar"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

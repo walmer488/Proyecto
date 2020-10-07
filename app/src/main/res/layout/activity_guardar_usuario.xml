@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".GuardarUsuario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="FORMULARIO DE REGISTRO DE USUARIO"
+                android:layout_marginRight="20dp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+
+            <EditText
+                android:id="@+id/et_nombre_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese su nombre"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_apellido_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese su apellido"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_correo_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese su correo"
+                android:textColor="#000"
+                android:inputType="textEmailAddress"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_usuario_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese su usuario"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_clave_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese su clave"
+                android:textColor="#000"
+                android:inputType="textPassword"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_tipo_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese el tipo de usuario"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_estado_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese el estado del usuario"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_pregunta_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="seleccione una pregunta"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/et_respuesta_usu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Ingrese su respuesta"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:textStyle="normal"/>
+
+
+            <Button
+                android:id="@+id/btn_registrar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Registrar"
+                android:textColor="#000" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
