@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#D18BF9"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".FormularioProducto"
+    tools:context=".GuardarProducto"
     >
 
 
@@ -119,7 +119,6 @@
                 android:paddingLeft="25dp" />
 
 
-
             <Spinner
                 android:id="@+id/id_categoria"
                 android:layout_width="match_parent"
@@ -132,7 +131,6 @@
                 android:hint="Categoria"
 
                 android:paddingLeft="25dp" />
-
 
             <Button
                 android:id="@+id/btn_guardar"

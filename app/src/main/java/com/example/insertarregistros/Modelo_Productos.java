@@ -10,6 +10,7 @@ public class Modelo_Productos implements Serializable {
     double precio;
     String unidad_medida;
     int id_categoria;
+    private int estado;
 
     public Modelo_Productos() {
     }
@@ -22,6 +23,14 @@ public class Modelo_Productos implements Serializable {
         this.precio = precio;
         this.unidad_medida = unidad_medida;
         this.id_categoria = id_categoria;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
 
     public int getId_producto() {

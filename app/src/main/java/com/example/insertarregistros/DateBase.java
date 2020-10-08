@@ -13,6 +13,8 @@ import java.util.List;
 
 public class DateBase extends SQLiteOpenHelper {
 
+    private static final String TAG = "DateBase";
+
     public DateBase(@Nullable Context context) {
         super(context, "Inventario", null, 2);
     }
@@ -100,6 +102,55 @@ public class DateBase extends SQLiteOpenHelper {
         }
         return estado;
     }
+
+    //METODO PARA INSERTAR REGISTRO A LA TABLA USUARIOS
+    public boolean InsertProducto(Modelo_Productos datos) {
+        boolean estado = true;
+        int resultado;
+        SQLiteDatabase bd = this.getWritableDatabase();
+        try {
+
+            String nombre = datos.getNombre_producto();
+            String descripcion = datos.getDescripcion_producto();
+            int cantidad = datos.getCantidad_producto();
+            double precio = datos.getPrecio();
+            String unidadMedida = datos.getUnidad_medida();
+            int idCategoria = datos.getId_categoria();
+            int estadoProducto = datos.getEstado();
+
+            Cursor fila = bd().rawQuery("select nombre_producto from tb_producto where nombre_producto = '"+nombre+"'", null);
+
+            if ( fila.moveToFirst() ) {
+                estado = false;
+            }else{
+                String SQL = ("INSERT INTO tb_producto (nombre_producto, descripcion_producto, catidad, precio, unidad_medida, id_categoria, estado_producto) " +
+                        "VALUES ('"+nombre+"','"+descripcion+"',"+cantidad+","+precio+",'"+unidadMedida+"',"+idCategoria+","+estadoProducto + ");");
+                bd().execSQL(SQL);
+                bd().close();
+                estado = true;
+            }
+
+        } catch (Exception e) {
+            estado = false;
+            Log.e("error.", e.toString());
+        }
+        return estado;
+    }
+
+
+    public int getIdCategoria(String nombreCategoria) {
+
+        Cursor fila = bd().rawQuery("select id_categoria from tb_categoria where nom_categoria = '"+nombreCategoria+"';", null);
+
+        int id = -1;
+        if (fila.moveToFirst()){
+            Log.i(TAG, "id_categoria: " + fila.getInt(fila.getColumnIndex("id_categoria")));
+            id = fila.getInt(fila.getColumnIndex("id_categoria"));
+        }
+
+        return id;
+    }
+
     // LISTA PARA HACER QUE SE MUESTRE EN EL RECYCLER VIEW
     public List<Modelo_Usuario> mostrarUsuarios(){
         SQLiteDatabase bd = this.getReadableDatabase();
